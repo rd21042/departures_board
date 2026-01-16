@@ -7,6 +7,8 @@ int stopID = -1; //Negative number is error, positive number is success
 void setup() {
   Serial.begin(9600);
   delay(1000);
+  Serial.println("Made possible by Trafiklab.se")
+
   connectToWiFi();
 
   while (stopID < 0) {
