@@ -2,7 +2,7 @@
 #define MAINFUNCTIONS_H
 
 void connectToWiFi();
-void apiIntialiaztion();
+void apiInitialization();
 int getStopID();
 bool getDepartures(int stopID);
 

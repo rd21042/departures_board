@@ -1,14 +1,14 @@
 #include "mainfunctions.h"
 #include "secrets.h"
 
-const int minute = 60000;
+const int minute = 60'000;
 int stopID = -1; //Negative number is error, positive number is success
 
 void setup() {
   Serial.begin(9600);
   delay(1000);
   connectToWiFi();
-  apiIntialiaztion();
+  apiInitialization();
 
   Serial.println("Made possible by trafiklab.se");
   while (stopID < 0) {
@@ -17,7 +17,7 @@ void setup() {
 }
 
 void loop() {
-  bool err = true; //False is success and true is error
+  bool err = true; //False ia success and true ia error
   while (err) {
     err = getDepartures(stopID);
     delay(100);

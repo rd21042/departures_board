@@ -32,7 +32,7 @@ void connectToWiFi() {
   Serial.println("\nConnected!");
 }
 
-void apiIntialiaztion() {
+void apiInitialization() {
   if (apiProvider == "trafiklab") {
     apiKey = API_KEY_TRAFIKLAB;
     apiHost = "realtime-api.trafiklab.se";
@@ -96,7 +96,7 @@ int getStopID() {
 
 /*
 Retrieves departures for a given stopID.
-Returns a bool thats true for any error and false for success
+Returns true on error, false on success
 */
 bool getDepartures(int stopID) {
   String path;
